@@ -6,7 +6,6 @@ import javafx.scene.layout.StackPane;
 
 
 public class ApplicationUI extends StackPane {
-    private static StackPane rootPane;
     private Button button;
 
     public ApplicationUI(){
@@ -15,19 +14,10 @@ public class ApplicationUI extends StackPane {
     }
     private void initializeControls(){
         button = new Button("Hello World");
-        rootPane = new StackPane();
 
     }
     private void layoutControls(){
-        rootPane.getChildren().add(button);
-
+        getChildren().add(button);
     }
 
-    public static StackPane getRootPane() {
-        return rootPane;
-    }
-
-    public Button getButton() {
-        return button;
-    }
 }
